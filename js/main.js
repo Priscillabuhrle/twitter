@@ -1,4 +1,4 @@
-window.addEventListener("load", init);
+/*window.addEventListener("load", init);
  
 var todos = [];
  
@@ -67,4 +67,77 @@ function createButton(li)
     };
     //devolvemos el nuevo elemento
     return todo;
+}*/
+
+
+function twitter(){
+    var nodoTexto= document.getElementById("todo").value;
+    var cajaMadre= document.getElementById("contenedortwitter");
+    var caja= document.createElement("div");
+    var texto= document.createTextNode(nodoTexto);
+    caja.setAttribute("class","agregar");
+    //agregat input
+    var marcar= document.createElement("input");
+    marcar.setAttribute("type", "checkbox");
+    //agregar corazon
+
+
+    //creamos un span donde meteremos un corazon y le damos un tipo
+    var botonCorazon= document.createElement("span");
+    // el tipo le da la funcionalidad
+    botonCorazon.setAttribute("type", "button");
+    // le dimos otro atributo que al apretar, el onclick cumpla la funcion cambiar de color llamada meGusta, la cual crearemos dsp
+    
+    //creamos un i al que despues le meteremos un icono
+    var iconoCorazon=document.createElement("i");
+    iconoCorazon.setAttribute("class", "glyphicon glyphicon-heart");
+
+    //agregar basurero
+
+    //Creamos el span donde valos a meter in i, al cual dsp le meteremos un icono
+    var spanBasura=document.createElement("span");
+    //le damos el atributo boton
+    spanBasura.setAttribute("id", "borrarpb");
+    spanBasura.setAttribute("type" , "button");
+    //atributo onclick al basurero y que llame la funcion borrar llamada borrarpb
+    spanBasura.setAttribute("onclick" , "borrarpb");
+    //spanBasura.addEventListener("click", borrarTarea());
+    //creamos un i al que despues le meteremos el icono
+    var iconoBasura= document.createElement("i");
+    iconoBasura.setAttribute("class", "glyphicon glyphicon-trash");
+
+
+
+    //subir input al div, antes del texto
+    caja.appendChild(marcar);
+    //2 lugar texto en el div
+    caja.appendChild(texto);
+    // 3 lugar meter icono corazon dentro del boton
+    botonCorazon.appendChild(iconoCorazon);
+    //4 meter boton al div
+    caja.appendChild(botonCorazon);
+    // 5 meter icono al boton
+    spanBasura.appendChild(iconoBasura);
+    //6 meter boton con icono basura al div
+    caja.appendChild(spanBasura);
+    //se une el div al html
+    cajaMadre.appendChild(caja);
+    //dejar al final colocar todo por prioridad, primero hacer, 2 concatenar dsp funciones
+    botonCorazon.addEventListener("click", function(){
+        botonCorazon.classList.toggle("rojo");
+    });
+    //evento para tachar tarea
+    marcar.addEventListener("click", function(){
+        caja.classList.toggle("tachar");
+    });
 }
+
+/*funcion borrar
+    function borrarTarea(){
+        var eliminar=getElementById("borrarpb");
+        var papaEliminar= eliminar.parentNode;
+
+        papaEliminar.parentNode.removeChild(papaEliminar)
+    }*/
+
+

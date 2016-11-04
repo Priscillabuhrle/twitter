@@ -2,3 +2,11 @@
 .grispb{
 	background-color: #B5B2B2;
 }
+/* funcion cambiar color corazon*/
+.rojo{
+	color: red;
+}
+
+.tachar{
+	text-decoration: line-through;
+}
