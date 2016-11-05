@@ -6,7 +6,28 @@
 .rojo{
 	color: red;
 }
-
+.rojo:hover{
+	opacity: 0.5;
+}
+/*funcion tachar*/
 .tachar{
 	text-decoration: line-through;
+}
+/*mover el corazon*/
+.movCorazon{
+	margin-left: 350px;
+}
+/*agrandar corazon*/
+.glyphicon-heart{
+	font-size: 20px;
+}
+/*agrandar tarro basura*/
+#borrarpb{
+	font-size: 20px;
+	margin-left: 30px;
+}
+
+#check{
+	margin-left: 10px;
+	margin-right: 20px;
 }

@@ -78,12 +78,14 @@ function twitter(){
     caja.setAttribute("class","agregar");
     //agregat input
     var marcar= document.createElement("input");
+    marcar.setAttribute("id" , "check");
     marcar.setAttribute("type", "checkbox");
     //agregar corazon
 
 
     //creamos un span donde meteremos un corazon y le damos un tipo
     var botonCorazon= document.createElement("span");
+    botonCorazon.setAttribute("class" , "movCorazon");
     // el tipo le da la funcionalidad
     botonCorazon.setAttribute("type", "button");
     // le dimos otro atributo que al apretar, el onclick cumpla la funcion cambiar de color llamada meGusta, la cual crearemos dsp
