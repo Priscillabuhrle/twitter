@@ -102,8 +102,10 @@ function twitter(){
     spanBasura.setAttribute("id", "borrarpb");
     spanBasura.setAttribute("type" , "button");
     //atributo onclick al basurero y que llame la funcion borrar llamada borrarpb
-    spanBasura.setAttribute("onclick" , "borrarpb");
-    //spanBasura.addEventListener("click", borrarTarea());
+    //spanBasura.setAttribute("onclick" , "borrarpb");
+    spanBasura.addEventListener("click", function(event){
+        borrarTarea(caja);
+        });
     //creamos un i al que despues le meteremos el icono
     var iconoBasura= document.createElement("i");
     iconoBasura.setAttribute("class", "glyphicon glyphicon-trash");
@@ -134,12 +136,10 @@ function twitter(){
     });
 }
 
-/*funcion borrar
-    function borrarTarea(){
-        var eliminar=getElementById("borrarpb");
-        var papaEliminar= eliminar.parentNode;
-
-        papaEliminar.parentNode.removeChild(papaEliminar)
-    }*/
+//funcion borrar
+    function borrarTarea(borrar){
+        
+        borrar.parentNode.removeChild(borrar);
+    }
 
 
