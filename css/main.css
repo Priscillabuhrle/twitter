@@ -1,6 +1,15 @@
+body{
+	background-color: #F59F43;
+}
 /*header*/
 .grispb{
-	background-color: #B5B2B2;
+	background-color: #070707;
+	color: white;
+	font-family: viewport;
+	padding: 2px 0px 2px 0px;
+	margin-left: -16px;
+	margin-right: -16px;
+	margin-bottom: 15px;
 }
 /* funcion cambiar color corazon*/
 .rojo{
@@ -13,23 +22,48 @@
 .tachar{
 	text-decoration: line-through;
 }
-/*mover el corazon*/
-.movCorazon{
-	margin-left: 350px;
-	float: right;
-}
+
 /*agrandar corazon*/
 .glyphicon-heart{
 	font-size: 20px;
 }
 /*agrandar tarro basura*/
 #borrarpb{
-	font-size: 20px;
-	margin-left: 30px;
+	display: inline-block;
 	float: right;
 }
-
+/*mover el corazon*/
+.movCorazon{
+	display: inline-block;
+	float: right;
+}
 #check{
 	margin-left: 10px;
 	margin-right: 20px;
 }
+.cajaBlanca{
+	background-color: white;
+	height: 280px;
+	border-radius: 5px;
+	border: 3px solid #B56302;
+}
+#add{
+	background-color: #B56302;
+	color:#FCF6EE ;
+	border: 1px solid #B56302;
+	border-radius: 8px;
+}
+.grispb{
+	background-color: #070707;
+	color: white;
+	font-family: viewport;
+	padding: 2px 0px 2px 0px;
+	margin-left: -14px;
+	margin-bottom: 15px;
+}
+#todo{
+	border: 3px solid #B56302;
+}
+
+ 
+ 

@@ -75,9 +75,11 @@ function twitter(){
     var cajaMadre= document.getElementById("contenedortwitter");
     var caja= document.createElement("div");
     var texto= document.createTextNode(nodoTexto);
-    caja.setAttribute("class","agregar");
+    //al texto se le da un espacio definido con los col
+   
     //agregat input
     var marcar= document.createElement("input");
+    caja.setAttribute("class","agregar");
     marcar.setAttribute("id" , "check");
     marcar.setAttribute("type", "checkbox");
     //agregar corazon
@@ -109,8 +111,9 @@ function twitter(){
     //creamos un i al que despues le meteremos el icono
     var iconoBasura= document.createElement("i");
     iconoBasura.setAttribute("class", "glyphicon glyphicon-trash");
-
-
+    /*if (texto ==""){
+       return false;
+      } else{*/
 
     //subir input al div, antes del texto
     caja.appendChild(marcar);
@@ -126,6 +129,7 @@ function twitter(){
     caja.appendChild(spanBasura);
     //se une el div al html
     cajaMadre.appendChild(caja);
+
     //dejar al final colocar todo por prioridad, primero hacer, 2 concatenar dsp funciones
     botonCorazon.addEventListener("click", function(){
         botonCorazon.classList.toggle("rojo");
